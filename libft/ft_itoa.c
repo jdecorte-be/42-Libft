@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int		len(long nb)
+int	len(long nb)
 {
 	int		len;
 
@@ -20,13 +20,14 @@ int		len(long nb)
 
 char	*ft_itoa(int nb)
 {
-	char *str;
+	char	*str;
 	long	n;
 	int		i;
 
 	n = nb;
 	i = len(n);
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (!(str))
 		return (NULL);
 	str[i--] = '\0';
 	if (n == 0)

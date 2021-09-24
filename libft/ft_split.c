@@ -1,14 +1,13 @@
-
 #include <stdlib.h>
 
-static int		unleah(char **str, int size)
+static int	unleah(char **str, int size)
 {
 	while (size--)
 		free(str[size]);
 	return (-1);
 }
 
-static int		count_words(const char *str, char charset)
+static int	count_words(const char *str, char charset)
 {
 	int	i;
 	int	words;
@@ -18,14 +17,14 @@ static int		count_words(const char *str, char charset)
 	while (str[i] != '\0')
 	{
 		if ((str[i + 1] == charset || str[i + 1] == '\0') == 1
-				&& (str[i] == charset || str[i] == '\0') == 0)
+			&& (str[i] == charset || str[i] == '\0') == 0)
 			words++;
 		i++;
 	}
 	return (words);
 }
 
-static void		write_word(char *dest, const char *from, char charset)
+static void	write_word(char *dest, const char *from, char charset)
 {
 	int	i;
 
@@ -38,7 +37,7 @@ static void		write_word(char *dest, const char *from, char charset)
 	dest[i] = '\0';
 }
 
-static int		write_split(char **split, const char *str, char charset)
+static int	write_split(char **split, const char *str, char charset)
 {
 	int		i;
 	int		j;
@@ -65,7 +64,7 @@ static int		write_split(char **split, const char *str, char charset)
 	return (0);
 }
 
-char			**ft_split(const char *str, char c)
+char	**ft_split(const char *str, char c)
 {
 	char	**res;
 	int		words;

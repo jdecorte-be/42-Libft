@@ -1,14 +1,14 @@
 #include "libft.h"
 
-char *ft_strchr(const char *string, int searchedChar )
+char	*ft_strchr(const char *string, int searchedChar )
 {
-    char *str = (char *)string;
+	char	*str;
 
-    while(*str != searchedChar && *str != 0)
-        str++;
-
-    if(*str == searchedChar)
-        return str;
-    else    
-        return NULL;
+	str = (char *)string;
+	while (*str != searchedChar && *str != 0)
+		str++;
+	if (*str == searchedChar)
+		return (str);
+	else
+		return (NULL);
 }
