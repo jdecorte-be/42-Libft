@@ -5,6 +5,13 @@ int	is_white_space(char c)
 	return (c == ' ' || c == '\t' || c == '\n');
 }
 
+void	ft_short(char const *set, int y, char *res, int x)
+{
+	y = 0;
+	while (set[y])
+		res[x++] = set[y++];
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
@@ -25,19 +32,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (i < max)
 	{
 		if (is_white_space(res[i]) == 1)
-		{
-			y = 0;
-			while (set[y])
-			{
-				res[x] = set[y];
-				x++;
-				y++;
-			}
-		}
+			ft_short(set, y, res, x);
 		else
-			res[x] = s1[i];
-		x++;
-		i++;
+			res[x++] = s1[i++];
 	}
 	return (res);
 }
