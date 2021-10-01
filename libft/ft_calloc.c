@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:48:05 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 14:11:17 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 17:17:44 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 	char	*res;
 
 	res = malloc(elementSize * elementCount);
-	if (!res || elementSize == 0 || elementCount == 0)
+	if (!res)
 		return (NULL);
 	bzero(res, elementSize * elementCount);
 	return (res);

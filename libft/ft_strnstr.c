@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:19:29 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 12:19:29 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 18:26:17 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (*big == 0 || *little == 0)
-		return ((char *)big);
 	i = 0;
-	while (i < len && big[i] != 0)
+	if (len == 0 || ft_strncmp(little, "", 1) == 0)
+		return (char *)big;
+	while (i < len)
 	{
 		j = 0;
 		while (big[i + j] == little[j] && i + j < len)

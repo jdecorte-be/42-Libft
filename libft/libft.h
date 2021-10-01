@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 14:12:18 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 17:11:18 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:10:54 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ft_isascii( int character );
 int		ft_isdigit( int character );
 int		ft_isprint(int character);
 char	*ft_itoa(int n);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

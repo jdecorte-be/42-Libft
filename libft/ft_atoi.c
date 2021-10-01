@@ -6,9 +6,11 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:47:52 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 11:47:56 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 20:51:26 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

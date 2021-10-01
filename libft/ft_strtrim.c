@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:19:35 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 15:31:06 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 20:58:25 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	y = 0;
 	x = 0;
 	res = malloc(sizeof(char) * ft_strlen(s1));
+	if(res == NULL)
+		return NULL;
 	max = ft_strlen(s1);
 	while (is_white_space(s1[i]) == 1)
 		i++;
