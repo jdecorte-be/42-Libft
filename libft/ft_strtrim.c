@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:19:35 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 12:19:35 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 15:31:06 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			res[x++] = s1[i++];
 	}
+	res[x] = '\0';
 	return (res);
 }

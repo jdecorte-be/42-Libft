@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:17:59 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 12:17:59 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/01 15:54:52 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 
 	if (!f || !del)
 		return (NULL);
-	while (lst)
+	while (lst->next)
 	{
 		fctres = ft_lstnew((*f)(lst->content));
 		if (!(fctres))
