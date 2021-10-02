@@ -6,27 +6,32 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:17:59 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/02 14:00:57 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 19:59:39 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*res;
-	t_list	*fctres;
+	t_list	*new_lst;
+	t_list	*new_elem;
 
-	if (!f || !del || !lst)
+	if (!lst || !f)
 		return (NULL);
+	new_elem = ft_lstnew(f(lst->content));
+	if (!(new_elem))
+		return (NULL);
+	new_lst = new_elem;
+	lst = lst->next;
 	while (lst)
 	{
-		fctres = ft_lstnew(f(lst->content));
-		if (!(fctres))
-			return (NULL);
-		ft_lstadd_back(&res, fctres);
+		new_elem = ft_lstnew(f(lst->content));
+		if (!(new_elem))
+			break ;
 		lst = lst->next;
-		free(fctres);
+		ft_lstadd_back(&new_lst, new_elem);
 	}
-	return (res);
+	return (new_lst);
 }
