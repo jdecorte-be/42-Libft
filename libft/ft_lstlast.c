@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:17:57 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 21:13:49 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 11:15:55 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*tmp;
-
-	tmp = lst;
-	while (tmp->next != 0)
-		tmp = tmp->next;
-	return (tmp);
+	if (!lst)
+		return (lst);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }

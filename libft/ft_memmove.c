@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:18:14 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 18:03:22 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 11:16:48 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*destmov;
 	char	*srcmov;
 	size_t	i;
+
 	if (!dest && !src)
-		return NULL;
+		return (NULL);
 	destmov = (char *)dest;
 	srcmov = (char *)src;
 	i = 0;

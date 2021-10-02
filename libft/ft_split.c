@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:18:31 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 12:18:31 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 13:52:17 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,8 @@ char	**ft_split(char const *s, char c)
 	int		strs_len;
 	char	**ptr;
 
-	if (!s)
-		return (NULL);
 	strs_len = count_words(s, c);
-	ptr = (char **)malloc(sizeof(char *) * (strs_len + 1));
+	ptr = ft_calloc(sizeof(char *), (strs_len + 1));
 	if (!(ptr))
 		return (NULL);
 	i = -1;
@@ -63,14 +61,10 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[0] == c)
 			s++;
-		if (!(ptr[i] = init_str(s, c)))
-		{
-			while (i > 0)
-				free(ptr[i--]);
-			free(ptr);
+		ptr[i] = init_str(s, c);
+		if (!(ptr[i]))
 			return (NULL);
-		}
-		s = s + ft_strlen(ptr[i]);
+		s += ft_strlen(ptr[i]);
 	}
 	ptr[i] = 0;
 	return (ptr);

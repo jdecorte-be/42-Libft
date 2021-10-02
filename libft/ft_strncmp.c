@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:19:27 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 16:54:59 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 11:25:07 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	ft_strncmp(const char *first, const char *second, size_t length)
 	i = 0;
 	while (i < length)
 	{
-		if ((unsigned char)first[i] != (unsigned char)second[i] || first[i] == 0 || second[i] == 0)
+		if (((unsigned char)first[i] != (unsigned char)second[i]
+				|| first[i] == 0) || second[i] == 0)
 			return ((unsigned char)first[i] - (unsigned char)second[i]);
 		i++;
 	}

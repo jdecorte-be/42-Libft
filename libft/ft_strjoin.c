@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:18:38 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 15:07:04 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:53:04 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	sizetotal = ft_strlen(s1) + ft_strlen(s2);
 	res = malloc(sizeof(char) * sizetotal);
-	if (!res)
+	if (!res || !s1 || !s2)
 		return (NULL);
 	while (s1[i] != 0)
 	{

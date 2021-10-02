@@ -6,7 +6,7 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:19:24 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/01 21:01:51 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/02 11:23:49 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	res = malloc(ft_strlen(s) * sizeof(char) + 1);
-	if(!(res))
-		return NULL;
+	if (!res)
+		return (NULL);
 	while (s[i] != 0)
 	{
 		res[i] = (*f)(i, s[i]);
