@@ -6,13 +6,13 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:19:35 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/02 12:54:53 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:35:37 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_white_space(char c, char const *set)
+static int	is_white_space(char c, char const *set)
 {
 	size_t	i;
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	y = 0;
 	x = 0;
-	res = ft_calloc(ft_strlen(s1), sizeof(char));
+	res = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	max = ft_strlen(s1);

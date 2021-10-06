@@ -6,13 +6,13 @@
 /*   By: jdecorte <jdecorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 12:18:31 by jdecorte          #+#    #+#             */
-/*   Updated: 2021/10/02 13:52:17 by jdecorte         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:31:42 by jdecorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int		count;
 	int		i;
@@ -31,7 +31,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*init_str(char const *s, char c)
+static char	*ft_str(char const *s, char c)
 {
 	int		i;
 	char	*ptr;
@@ -39,9 +39,12 @@ char	*init_str(char const *s, char c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	ptr = (char *)malloc(sizeof(char) * (i + 1));
+	ptr = malloc(sizeof(char) * (i + 1));
 	if (!(ptr))
+	{
+		free(ptr);
 		return (NULL);
+	}
 	ft_strlcpy(ptr, s, i + 1);
 	return (ptr);
 }
@@ -61,9 +64,12 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[0] == c)
 			s++;
-		ptr[i] = init_str(s, c);
+		ptr[i] = ft_str(s, c);
 		if (!(ptr[i]))
+		{
+			free(ptr);
 			return (NULL);
+		}
 		s += ft_strlen(ptr[i]);
 	}
 	ptr[i] = 0;
