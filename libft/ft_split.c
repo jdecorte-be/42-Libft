@@ -49,6 +49,18 @@ static char	*ft_str(char const *s, char c)
 	return (ptr);
 }
 
+static void	ft_free_tab(char **tab)
+{
+	char	**pos;
+
+	if (tab == NULL)
+		return ;
+	pos = tab;
+	while (*pos != NULL)
+		free(*(pos++));
+	free(tab);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
