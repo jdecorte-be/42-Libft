@@ -120,15 +120,6 @@ This Project was made with:
 
 # :construction_worker: How to Run
 ```bash
-# If you want a Script for testing use this :
-# https://github.com/luizlcezario/Libft_Test.git
-
-# Clone the Repo
-$ git clone https://github.com/luizlcezario/Libft_Test.git
-
-# Enter in the Folder
-$ cd Libft
-
 # *************COMMANDS************ #
 # run - run compile all the libtest with the your libft and run the all tests
 $ make all
