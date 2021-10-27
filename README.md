@@ -17,9 +17,6 @@
 
 
 <p align="center">	
-   <a href="https://www.linkedin.com/in/luiz-lima-cezario/">
-      <img alt="Luiz Cezario" src="https://img.shields.io/badge/-luizCezario-682998?style=flat&logo=Linkedin&logoColor=white" />
-   </a>
 
   <a aria-label="Completed" href="https://www.42sp.org.br/">
     <img src="https://img.shields.io/badge/42.sp-Libft-682998?logo="></img>
