@@ -16,26 +16,14 @@
 </p>
 
 
-<p align="center">	
-
-  <a aria-label="Completed" href="https://www.42sp.org.br/">
-    <img src="https://img.shields.io/badge/42.sp-Libft-682998?logo="></img>
-  </a>
-  <a href="https://github.com/luizlcezario/Libft/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/luizlcezario/Libft?color=682998">
-  </a> 
-
-  <a href="https://github.com/luizlcezario/Libft/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/luizlcezario/Libft?color=682998&logo=github">
-  </a>
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/jdecorte-be/42-Libft?color=lightblue" />
+	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/jdecorte-be/42-Libft?color=critical" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/jdecorte-be/42-Libft?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jdecorte-be/42-Libft?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jdecorte-be/42-Libft?color=green" />
 </p>
 
-<div align="center">
-  <sub>Libft of 42. Make with ❤︎ for
-        <a href="https://github.com/luizlcezario">Luiz Cezario</a> 
-    </a>
-  </sub>
-</div>
 
 
 # :pushpin: Index
